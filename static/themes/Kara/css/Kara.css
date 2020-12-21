@@ -10,6 +10,23 @@ Text - #d0d8e2
 Hover Text - #e5e5e5
 
 */
+:root {
+  --main-bg-color: #2C2F33;
+
+  --box-bg: #23272a;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+
+  --box-bg2: #212528;
+
+  --primary-color: #ffffff;
+  --primary-color-hover: #cfcfcf;
+  --secondary-color: #ebebeb;
+  --secondary-color: #ebebeb;
+
+  --red: #FF0004;
+  --red-hover: #b50003;
+};
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900");
 
 body {
@@ -233,4 +250,12 @@ a, .dropdown {
 
 .table th {
 	border-top: 1px solid #2C2F33;
+}
+
+a {
+	color: #ffffff
+}
+
+a:hover {
+	color: #cfcfcf;
 }
