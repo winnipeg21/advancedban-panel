@@ -16,9 +16,7 @@ class Cookie {
 			
 			while(selection.charAt(0) === " ") selection = selection.substring(1);
 			
-			if(selection.indexOf(this._prefix + "_" + cookie + "=") === 0) {
-				return selection.substring((this._prefix + "_" + cookie + "=").length, selection.length);
-			}
+			if(selection.indexOf(this._prefix + "_" + cookie + "=") === 0) return selection.substring((this._prefix + "_" + cookie + "=").length, selection.length);
 		}
 		
 		return false;

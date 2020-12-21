@@ -1,10 +1,14 @@
 Simple and sleek website panel for AdvancedBan.
-* Example can be found at [here](https://mathhulk.me/advancedban/example).
+* Example can be found at [here](https://mathhulk.me/advancedbans/example).
 
 ## Notable Features
 * Self-host
+* Support multiple AdvancedBan versions
+  * Legacy version 1.2.5
+  * Stable version 2.1.5
+  * Beta version 2.1.6
 * Themes
-  * Beautiful default theme
+  * Beautiful default and contributor themes
   * Create custom themes
   * User theme selection
 * Languages
@@ -18,13 +22,14 @@ Simple and sleek website panel for AdvancedBan.
     * Search punishment through input for name, reason and operator
     * Mix and match multiple queries during each search
 * Players
-  * Updated per 5 seconds
-  * Enable or disable in the configuration
-  * Configure server host address
-* Menu
+  * Updated in a 5 second interval
+  * Configure server host address and port
+  * Optional query for older servers
+  * Enable or disable
+* Navigation
   * Configure custom support link
   * Configure custom appeal link
-  * Enable or disable either or both
+  * Enable or disable one or both
 
 ## Requirements
 * PHP v7.2.8 recommended
@@ -33,7 +38,7 @@ Simple and sleek website panel for AdvancedBan.
 * Apache mod_rewrite (optional, can be enabled)
 
 ## Installation
-Clone `advancedban-panel` to a local file location. Navigate to the `database.php` file, which should be located at `static\database.php`. Open the file with a text editor, such as Notepad++ for desktop or Nano for command-line. Enter the credentials for your database in the appropriate place and continue.
+Clone `advancedbans` to a local file location. Navigate to the `database.php` file, which should be located at `static\database.php`. Open the file with a text editor, such as Notepad++ for desktop or Nano for command-line. Enter the credentials for your database in the appropriate place and continue.
 ```php
 <?php
 
@@ -43,23 +48,28 @@ define("DATABASE_PASSWORD", "password");
 define("DATABASE_DATABASE", "database");
 ```
 
-Configuration options are also available for AdvancedBan Panel. These options allow you to change how AdvancedBan Panel functions. The configuration file for AdvancedBan Panel is located at `static\configuration.json`. Once you have made changes to the configuration file, I would suggest placing the configuration file in a JSON validator to make sure you have not removed something you should not have.
+Configuration options are also available for AdvancedBans. These options allow you to change how AdvancedBans functions. The configuration file for AdvancedBans is located at `static\configuration.json`. Once you have made changes to the configuration file, I would suggest placing the configuration file in a JSON validator to make sure you have not removed something you should not have.
+
+Please note that the **version** must be changed from **stable** to **legacy** or **beta** in order to use AdvancedBans with AdvancedBan version 1.2.5 or 2.1.6. **Stable** denotes use of AdvancedBan version 2.1.5.
 ```json
 {
+    "version": "stable",
+    "mod_rewrite": false,
     "default": {
         "theme": "photon",
         "language": "en-US"
     },
-    "mod_rewrite": false,
-    "messages": {
-        "title": "advancedban-panel",
-        "description": "Simple and sleek website panel for AdvancedBan."
+    "language": {
+        "title": "AdvancedBans",
+        "description": "Simple and sleek punishment panel for AdvancedBan."
     },
     "player_count": {
         "enabled": true,
-        "server_ip": "mc.hypixel.net"
+        "query": false,
+        "host": "mc.hypixel.net",
+        "port": "25565"
     },
-    "support": {
+    "navigation": {
         "contact": {
             "enabled": true,
             "link": "http://example.com/contact"
@@ -116,10 +126,10 @@ Translating Advancedban Panel is simple. Languages are located in `static\langua
 	}
 }
 ```
-Consider translating AdvancedBan Panel into a language you are fluent in. Create a pull request and I will merge the language into the master branch.
+Consider translating AdvancedBans into a language you are fluent in. Create a pull request and I will merge the language into the master branch.
 
 ## Themes
-Like translating AdvancedBan Panel, theming AdvancedBan Panel is also simple. However, AdvancedBan Panel will always load the core files for Bootstrap and will follow a Bootstrap HTML structure. Themes are stored in `static\themes` and the following is an example of the file structure for a theme.
+Like translating AdvancedBans, theming AdvancedBans is also simple. However, AdvancedBans will always load the core files for Bootstrap and will follow a Bootstrap HTML structure. Themes are stored in `static\themes` and the following is an example of the file structure for a theme.
 ```
 themes /
 \ - photon /
@@ -129,7 +139,7 @@ themes /
     | - js
     \ - configuration.json
 ```
-Static stylesheets and scripts should be placed in the appropriate `css` and `js` folders. As noted before, AdvancedBan Panel will always load core Bootstrap files and jQuery before custom theme stylesheets and scripts.
+Static stylesheets and scripts should be placed in the appropriate `css` and `js` folders. As noted before, AdvancedBans will always load core Bootstrap files and jQuery before custom theme stylesheets and scripts.
 
 The `configuration.json` file for your theme should follow this template.
 ```json
@@ -140,7 +150,7 @@ The `configuration.json` file for your theme should follow this template.
 ```
 
 ## Icons
-To change the icons for AdvancedBan Panel, replace the icon files located in `static\resources\images` and `static\resources\images\icons` and the `favicon.ico` file using a tool like https://www.favicon-generator.org.
+To change the icons for AdvancedBans, replace the icon files located in `static\resources\images` and `static\resources\images\icons` and the `favicon.ico` file using a tool like https://www.favicon-generator.org.
 
 ## Credit
 The author of AdvancedBan is Leoko. Find AdvancedBan on [SpigotMC](https://www.spigotmc.org/resources/advancedban.8695/).

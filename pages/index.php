@@ -17,6 +17,7 @@ $__network->send( );
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
+<<<<<<< HEAD
 		<title>Ban Panel | RevivalMC</title>
         <link rel="icon" href="https://bans.revivalmc.co/static/resources/images/icon.png">
         <!-- Search Engine -->
@@ -41,6 +42,21 @@ $__network->send( );
 		<meta name="og:url" content="https://bans.revivalmc.co">
 		<meta name="og:site_name" content="RevivalMC">
 		<meta name="og:type" content="website">
+=======
+		<title><?= $__configuration->get(["language", "title"]) ?></title>
+		
+		<meta name="description" content="<?= $__configuration->get(["language", "description"]) ?>">
+		<meta name="application-name" content="<?= $__configuration->get(["language", "title"]) ?>">
+		<!--<meta name="theme-color" content="#fafafa">-->
+		<meta name="mobile-web-app-capable" content="yes">
+		
+		<meta property="og:title" content="<?= $__language->get("punishments", "Punishments") ?>">
+		<meta property="og:url" content="//<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>">
+		<meta property="og:site_name" content="<?= $__configuration->get(["language", "title"]) ?>">
+		<meta property="og:image" content="//<?= $_SERVER["HTTP_HOST"] . strtok($_SERVER["REQUEST_URI"], "?") ?>static/resources/images/icon.png">
+		<meta property="og:description" content="<?= $__configuration->get(["language", "description"]) ?>">
+		<meta property="og:type" content="website">
+>>>>>>> upstream/master
 		
 		<meta name="msapplication-tooltip" content="<?= $__configuration->get(["language", "title"]) ?>">
 		<!--<meta name="msapplication-navbutton-color" content="#fafafa">-->
@@ -79,7 +95,11 @@ $__network->send( );
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 			<div class="container">
+<<<<<<< HEAD
 				<a class="navbar-brand" href="https://revivalmc.co"><?= $__configuration->get(["language", "title"]) ?></a>
+=======
+				<a class="navbar-brand" href="./"><?= $__configuration->get(["language", "title"]) ?></a>
+>>>>>>> upstream/master
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"><!-- toggle --></span>
 				</button>
@@ -103,6 +123,103 @@ $__network->send( );
 						
 						?>
 					</ul>
+<<<<<<< HEAD
+=======
+				
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $__language->get("themes", "Themes") ?> <span class="caret"><!-- icon --></span></a>
+							
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="./<?= parse("user/theme?default") ?>"><?= $__language->get("default", "Default") ?></a>
+								<div class="dropdown-divider"><!-- divide --></div>
+								<?php
+								
+								foreach(glob($__root . "/static/themes/*") as $theme) {
+									
+									$configuration = json_decode(file_get_contents($theme . "/configuration.json"), true);
+									
+									?>
+									<a class="<?= basename($theme) === $__cookie->get("theme") ? "active " : " " ?>dropdown-item" href="./<?= parse("user/theme?set=" . basename($theme)) ?>"><?= htmlspecialchars($configuration["theme"]) ?> <span class="badge badge-primary"><?= htmlspecialchars($configuration["creator"]) ?></span></a>
+									<?php
+								
+								}
+								
+								?>
+							</div>
+						</li>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $__language->get("languages", "Languages") ?> <span class="caret"><!-- icon --></span></a>
+							
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="./<?= parse("user/language?default") ?>"><?= $__language->get("default", "Default") ?></a>
+								
+								<div class="dropdown-divider"><!-- divide --></div>
+								
+								<?php
+								
+								foreach(glob($__root . "/static/languages/*") as $language) {
+									
+									$configuration = json_decode(file_get_contents($language), true);
+									
+									?>
+									<a class="<?= basename($language, ".json") === $__cookie->get("language") ? "active " : " " ?>dropdown-item" href="./<?= parse("user/language?set=" . basename($language, ".json")) ?>"><?= htmlspecialchars($configuration["language"]) ?></a>
+									<?php
+									
+								}
+								
+								?>
+							</div>
+						</li>
+						
+						<?php
+						
+						if($__configuration->get(["navigation", "contact", "enabled"]) === true || $__configuration->get(["navigation", "appeal", "enabled"]) == true) {
+						
+							?>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $__language->get("support", "Support") ?> <span class="caret"><!-- icon --></span></a>
+								
+								<div class="dropdown-menu">
+									<?php
+									
+									if($__configuration->get(["navigation", "contact", "enabled"]) === true) {
+										
+										?>
+										<a class="dropdown-item" href="<?= $__configuration->get(["navigation", "contact", "link"]) ?>"><?= $__language->get("contact", "Contact") ?></a>
+										<?php
+										
+									}
+									
+									if($__configuration->get(["navigation", "appeal", "enabled"]) === true) {
+										
+										?>
+										<a class="dropdown-item" href="<?= $__configuration->get(["navigation", "appeal", "link"]) ?>"><?= $__language->get("appeal", "Appeal") ?></a>
+										<?php
+										
+									}
+									
+									?>
+								</div>
+							</li>
+							<?php
+							
+						}
+						
+						?>
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $__language->get("credit", "Credit") ?> <span class="caret"><!-- icon --></span></a>
+							
+							<ul class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" target="_blank" href="https://github.com/mathhulk/advancedban-panel">GitHub</a>
+								<a class="dropdown-item" target="_blank" href="https://www.spigotmc.org/resources/advancedban.8695/">AdvancedBan</a>
+								<a class="dropdown-item" target="_blank" href="https://mathhulk.com">mathhulk</a>
+							</ul>
+						</li>
+					</ul>
+>>>>>>> upstream/master
 				</div>
 			</div>
 		</nav>
