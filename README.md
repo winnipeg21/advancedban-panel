@@ -1,5 +1,7 @@
+Forked from Mathhulk with minor changes to Kara theme.
+
 Simple and sleek website panel for AdvancedBan.
-* Example can be found at [here](https://mathhulk.me/advancedbans/example).
+* Example can be found at [here](https://bans.revivalmc.co).
 
 ## Notable Features
 * Self-host
