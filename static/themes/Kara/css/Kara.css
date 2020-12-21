@@ -1,31 +1,10 @@
 /*
 
 Kara for AB-Web
-By: winniepg21
-
-Primary Color - #2C2F33
-Secondary Color - #23272A
-Tertiary - #16191f
-Text - #d0d8e2
-Hover Text - #e5e5e5
+By: winnipeg21 - https://winnipeg21.xyz
 
 */
-:root {
-  --main-bg-color: #2C2F33;
 
-  --box-bg: #23272a;
-  --box-shadow: rgba(0, 0, 0, 0.1);
-
-  --box-bg2: #212528;
-
-  --primary-color: #ffffff;
-  --primary-color-hover: #cfcfcf;
-  --secondary-color: #ebebeb;
-  --secondary-color: #ebebeb;
-
-  --red: #FF0004;
-  --red-hover: #b50003;
-};
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900");
 
@@ -36,8 +15,24 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	color: #d0d8e2;
+	color: var(--secondary-color);
 }
+
+:root {
+  --main-bg-color: #2C2F33;
+
+  --box-bg: #23272a;
+  --box2-bg: #1c1f21;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+
+  --primary-color: #ffffff;
+  --primary-color-hover: #cfcfcf;
+  --secondary-color: #ebebeb;
+  --secondary-color-hover: #c9c9c9;
+
+  --red: #FF0004;
+  --red-hover: #b50003;
+};
 
 a, .dropdown {
 	cursor: pointer;
@@ -67,7 +62,7 @@ a, .dropdown {
 .splash {
 	min-height: 50vh;
 	padding: 22vh 0 9vh;
-	color: #fff;
+	color: var(--primary-color);
 	background: rgba(0, 123, 255, 0.1);
 }
 
@@ -93,7 +88,7 @@ a, .dropdown {
 }
 
 .search {
-	background: #23272A;
+	background: var(--box-bg);
 	padding: 5vh;
 }
 
@@ -107,7 +102,7 @@ a, .dropdown {
 .form-control:focus {
 	border-color: #16191f;
 	background-color: #16191f;
-	color: #d0d8e2;
+	color: var(--secondary-color);
 }
 
 .dropdown-menu, .search button:focus, .search button, .search input, .search input:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
@@ -134,6 +129,7 @@ a, .dropdown {
 
 .table {
 	margin-bottom: 0;
+	color: var(--primary-color-hover);
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
@@ -145,20 +141,20 @@ a, .dropdown {
 }
 
 .page-item.active .page-link {
-	background: #23272A;
+	background: var(--box-bg);
 	border: 1px solid #23272A;
-	color: #d0d8e2;
+	color: var(--secondary-color);
 }
 
 .page-link:hover {
-	background-color: #23272A;
-	color: #d0d8e2;
+	background-color: var(--box-bg);
+	color: var(--secondary-color);
 	border: 1px solid #23272A;
 }
 
 .page-link {
-	background-color: #2C2F33;
-	color: #d0d8e2;
+	background-color: var(--main-bg-color);
+	color: var(--secondary-color);
 	border: 1px solid #23272A;
 }
 
@@ -172,16 +168,16 @@ a, .dropdown {
 
 /* Redness */
 .btn-primary {
-	background-color: #FF0004;
-	border-color: #FF0004;
+	background-color: var(--red);
+	border-color: var(--red);
 }
 
 .badge-primary {
-	background-color: #FF0004;
+	background-color: var(--red);
 }
 
 .dropdown-menu {
-	border-color: #FF0004;
+	border-color: var(--red);
 }
 
 .dropdown-divider {
@@ -189,8 +185,8 @@ a, .dropdown {
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle, .btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
-	background-color: #DA0104;
-	border-color: #DA0104;
+	background-color: var(--red-hover);
+	border-color: var(--red-hover);
 }
 
 /* Extra Lightness */
@@ -216,36 +212,36 @@ a, .dropdown {
 }
 
 .dropdown-item {
-	color: #d0d8e2;
+	color: var(--secondary-color);
 }
 .navbar-light .navbar-nav .show>.nav-link {
-	color: #d0d8e2;
+	color: var(--secondary-color);
 }
 
 .dropdown-item:hover {
-	background-color: #23272A;
-	color: #d0d8e2;
+	background-color: var(--box-bg);
+	color: var(--secondary-color);
 }
 
 /* Darkness */
 
 .navbar-expand-lg .navbar-nav .dropdown-menu {
-	background-color: #2C2F33;
+	background-color: var(--main-bg-color);
 }
 
 .dropdown-item.active {
-	background-color: #23272A;
-	color: #d0d8e2;
+	background-color: var(--box2-bg);
+	color: var(--secondary-color);
 }
 
 .table td {
-	background-color: #2C2F33;
+	background-color: var(--main-bg-color);
 	border-top: 1px solid #23272A;
 }
 
 .dropdown-menu.show {
-	background-color: #2C2F33;
-	color: #d0d8e2;
+	background-color: var(--main-bg-color);
+	color: var(--secondary-color);
 }
 
 .table th {
