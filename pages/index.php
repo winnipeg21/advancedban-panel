@@ -16,46 +16,6 @@ $__network->send( );
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		
-<<<<<<< HEAD
-		<title>Ban Panel | RevivalMC</title>
-        <link rel="icon" href="https://bans.revivalmc.co/static/resources/images/icon.png">
-        <!-- Search Engine -->
-		<meta name="description" content="View all punishment history on RevivalMC" >
-		<meta name="image" content="https://bans.revivalmc.co/static/resources/images/icon.png">
-		<meta name="theme-color" content="#75bc30">
-		<!-- Schema.org for Google -->
-		<meta itemprop="name" content="Ban Panel | RevivalMC">
-		<meta itemprop="description" content="View all punishment history on RevivalMC" >
-		<meta itemprop="image" content="https://bans.revivalmc.co/static/resources/images/icon.png">
-		<!-- Twitter -->
-		<meta name="twitter:card" content="summary">
-		<meta property="twitter:url" content="https://bans.revivalmc.co">
-		<meta name="twitter:title" content="Ban Panel | RevivalMC">
-		<meta name="twitter:description" content="View all punishment history on RevivalMC" >
-		<meta name="twitter:site" content="@revivalmcs">
-		<meta name="twitter:image:src" content="https://bans.revivalmc.co/static/resources/images/icon.png">
-		<!-- Open Graph general (Facebook, Pinterest & Google+) -->
-		<meta name="og:title" content="Ban Panel | RevivalMC">
-		<meta name="og:description" content="View all punishment history on RevivalMC" >
-		<meta name="og:image" content="https://bans.revivalmc.co/static/resources/images/icon.png">
-		<meta name="og:url" content="https://bans.revivalmc.co">
-		<meta name="og:site_name" content="RevivalMC">
-		<meta name="og:type" content="website">
-=======
-		<title><?= $__configuration->get(["language", "title"]) ?></title>
-		
-		<meta name="description" content="<?= $__configuration->get(["language", "description"]) ?>">
-		<meta name="application-name" content="<?= $__configuration->get(["language", "title"]) ?>">
-		<!--<meta name="theme-color" content="#fafafa">-->
-		<meta name="mobile-web-app-capable" content="yes">
-		
-		<meta property="og:title" content="<?= $__language->get("punishments", "Punishments") ?>">
-		<meta property="og:url" content="//<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>">
-		<meta property="og:site_name" content="<?= $__configuration->get(["language", "title"]) ?>">
-		<meta property="og:image" content="//<?= $_SERVER["HTTP_HOST"] . strtok($_SERVER["REQUEST_URI"], "?") ?>static/resources/images/icon.png">
-		<meta property="og:description" content="<?= $__configuration->get(["language", "description"]) ?>">
-		<meta property="og:type" content="website">
 >>>>>>> upstream/master
 		
 		<meta name="msapplication-tooltip" content="<?= $__configuration->get(["language", "title"]) ?>">
