@@ -16,7 +16,20 @@ $__network->send( );
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
->>>>>>> upstream/master
+		
+		<title><?= $__configuration->get(["language", "title"]) ?></title>
+		
+		<meta name="description" content="<?= $__configuration->get(["language", "description"]) ?>">
+		<meta name="application-name" content="<?= $__configuration->get(["language", "title"]) ?>">
+		<!--<meta name="theme-color" content="#fafafa">-->
+		<meta name="mobile-web-app-capable" content="yes">
+		
+		<meta property="og:title" content="<?= $__language->get("punishments", "Punishments") ?>">
+		<meta property="og:url" content="//<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>">
+		<meta property="og:site_name" content="<?= $__configuration->get(["language", "title"]) ?>">
+		<meta property="og:image" content="//<?= $_SERVER["HTTP_HOST"] . strtok($_SERVER["REQUEST_URI"], "?") ?>static/resources/images/icon.png">
+		<meta property="og:description" content="<?= $__configuration->get(["language", "description"]) ?>">
+		<meta property="og:type" content="website">
 		
 		<meta name="msapplication-tooltip" content="<?= $__configuration->get(["language", "title"]) ?>">
 		<!--<meta name="msapplication-navbutton-color" content="#fafafa">-->
@@ -55,11 +68,7 @@ $__network->send( );
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 			<div class="container">
-<<<<<<< HEAD
-				<a class="navbar-brand"><?= $__configuration->get(["language", "title"]) ?></a>
-=======
 				<a class="navbar-brand" href="./"><?= $__configuration->get(["language", "title"]) ?></a>
->>>>>>> upstream/master
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"><!-- toggle --></span>
 				</button>
@@ -83,8 +92,6 @@ $__network->send( );
 						
 						?>
 					</ul>
-<<<<<<< HEAD
-=======
 				
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item dropdown">
@@ -179,7 +186,6 @@ $__network->send( );
 							</ul>
 						</li>
 					</ul>
->>>>>>> upstream/master
 				</div>
 			</div>
 		</nav>
@@ -251,23 +257,4 @@ $__network->send( );
 		
 		<?= $__theme->get("script", "js") ?>
 	</body>
-	<footer>
-		<ul class="nav justify-content-center">
-		  <li class="nav-item">
-		    <a class="nav-link" href="https://revivalmc.co">Home</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="https://shop.revivalmc.co">Shop</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="https://revivalmc.co/vote">Voting</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="https://revivalmc.co/discord">Discord</a>
-		  </li>
-		</ul>
-		<div style="text-align: center;color: #eee">
-			Panel by <a href="https://mathhulk.com/">Matthulk</a>
-		</div>
-	</footer>
 </html>
