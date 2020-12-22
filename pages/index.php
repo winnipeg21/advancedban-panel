@@ -56,7 +56,7 @@ $__network->send( );
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 			<div class="container">
 <<<<<<< HEAD
-				<a class="navbar-brand" href="https://revivalmc.co"><?= $__configuration->get(["language", "title"]) ?></a>
+				<a class="navbar-brand"><?= $__configuration->get(["language", "title"]) ?></a>
 =======
 				<a class="navbar-brand" href="./"><?= $__configuration->get(["language", "title"]) ?></a>
 >>>>>>> upstream/master
